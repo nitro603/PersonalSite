@@ -4,41 +4,9 @@
     <meta charset="UTF-8">
     <title>Cristian Tavara</title>
     <link rel="icon" href="./Assets/anti.jpg">
+    <script src="script.js"></script>
+    <style src="stylesheet.css"></style>
     
-    <!-- CSS for the tabs -->
-    <style>
-        /* Style the tab buttons */
-        .tab-menu {
-            margin-bottom: 20px;
-        }
-        
-        .tab-btn {
-            background-color: #f1f1f1;
-            border: 1px solid #ccc;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        /* Change background color of active tab */
-        .tab-btn.active {
-            background-color: #ddd;
-            font-weight: bold;
-        }
-
-        /* Hide tab content by default */
-        .tab-content {
-            display: none;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-top: none;
-        }
-
-        /* Show the active tab content */
-        .tab-content.active {
-            display: block;
-        }
-    </style>
 </head>
 <body>
 
@@ -83,27 +51,6 @@
             <!-- Add more game projects here -->
         </ul>
     </div>
-
-    <!-- JavaScript to handle tab switching -->
-    <script>
-        function openTab(evt, tabId) {
-            // Get all elements with class="tab-content" and hide them
-            var tabContents = document.getElementsByClassName("tab-content");
-            for (var i = 0; i < tabContents.length; i++) {
-                tabContents[i].classList.remove("active");
-            }
-
-            // Get all elements with class="tab-btn" and remove the class "active"
-            var tabButtons = document.getElementsByClassName("tab-btn");
-            for (var i = 0; i < tabButtons.length; i++) {
-                tabButtons[i].classList.remove("active");
-            }
-
-            // Show the current tab, and add an "active" class to the button that opened the tab
-            document.getElementById(tabId).classList.add("active");
-            evt.currentTarget.classList.add("active");
-        }
-    </script>
 
 </body>
 </html>
