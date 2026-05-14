@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cristian Tavara</title>
+    <link rel="icon" href="./Assets/anti.jpg">
+    
+    <!-- CSS for the tabs -->
+    <style>
+        /* Style the tab buttons */
+        .tab-menu {
+            margin-bottom: 20px;
+        }
+        
+        .tab-btn {
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Change background color of active tab */
+        .tab-btn.active {
+            background-color: #ddd;
+            font-weight: bold;
+        }
+
+        /* Hide tab content by default */
+        .tab-content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        /* Show the active tab content */
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>About Me</h1>
+    <p>Hi! My name is Cristian Tavara and I love to problem solve. I scratch that itch through different outlets like web or video game development and Brazilian jiu jitsu!</p>
+    <p>Scroll down to see my projects.</p>
+
+    <h1>Projects</h1>
+    
+    <!-- Tab Navigation Buttons -->
+    <div class="tab-menu">
+        <button class="tab-btn active" onclick="openTab(event, 'qa-projects')">Quality Assurance</button>
+        <button class="tab-btn" onclick="openTab(event, 'game-projects')">Games</button>
+    </div>
+
+    <!-- Quality Assurance Projects Section -->
+    <div id="qa-projects" class="tab-content active">
+        <h2>Quality Assurance</h2>
+        <p>In these projects I aim to learn skills related to being a QA engineer.</p>
+        <ul>
+            <li>
+                <div>
+                    <h3>Healthcare Data Integrity Suite</h3>
+                    <p>Use a public healthcare dataset (like a CSV of mock hospital discharges) and import it into a SQL database.</p>
+                    <p>The Task: Write a series of SQL "Audit Scripts" that check for data anomalies—for example, finding patients with a "discharge date" earlier than their "admission date" or identifying duplicate IDs.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Games Projects Section -->
+    <div id="game-projects" class="tab-content">
+        <h2>Games</h2>
+        <p>A collection of my game development projects and prototypes.</p>
+        <ul>
+            <li>
+                <div>
+                    <h3>My Friend gorp</h3>
+                    <p>Brief description of your game goes here...</p>
+                </div>
+            </li>
+            <!-- Add more game projects here -->
+        </ul>
+    </div>
+
+    <!-- JavaScript to handle tab switching -->
+    <script>
+        function openTab(evt, tabId) {
+            // Get all elements with class="tab-content" and hide them
+            var tabContents = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+
+            // Get all elements with class="tab-btn" and remove the class "active"
+            var tabButtons = document.getElementsByClassName("tab-btn");
+            for (var i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(tabId).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+
+</body>
+</html>
