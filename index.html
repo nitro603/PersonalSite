@@ -5,52 +5,81 @@
     <title>Cristian Tavara</title>
     <link rel="icon" href="./Assets/anti.jpg">
     <script src="script.js"></script>
-    <style src="stylesheet.css"></style>
+    <link rel="stylesheet" href="stylesheet.css">
     
 </head>
 <body>
-
-    <h1>About Me</h1>
-    <p>Hi! My name is Cristian Tavara and I love to problem solve. I scratch that itch through different outlets like web or video game development and Brazilian jiu jitsu!</p>
-    <p>Scroll down to see my projects.</p>
-
-    <h1>Projects</h1>
-    
-    <!-- Tab Navigation Buttons -->
-    <div class="tab-menu">
-        <button class="tab-btn active" onclick="openTab(event, 'qa-projects')">Quality Assurance</button>
-        <button class="tab-btn" onclick="openTab(event, 'game-projects')">Games</button>
-    </div>
-
-    <!-- Quality Assurance Projects Section -->
-    <div id="qa-projects" class="tab-content active">
-        <h2>Quality Assurance</h2>
-        <p>In these projects I aim to learn skills related to being a QA engineer.</p>
-        <ul>
-            <li>
-                <div>
-                    <h3>Healthcare Data Integrity Suite</h3>
-                    <p>Use a public healthcare dataset (like a CSV of mock hospital discharges) and import it into a SQL database.</p>
-                    <p>The Task: Write a series of SQL "Audit Scripts" that check for data anomalies—for example, finding patients with a "discharge date" earlier than their "admission date" or identifying duplicate IDs.</p>
+    <div>
+        <!-- Hero > portfolio > about me > projects > contacts-->
+        <section>
+            <div>
+                <h3>Hi! my name is Cristian Tavara, I love to solve problems and I scratch that itch through different outlets like programming or Brazillian jiu jitsu! 🥋</h3>
+                <p>Below is my portfolio</p>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h2>Portfolio</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Below is more about me</p>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h2>About me</h2>
+                <p>I studied computer science at CUNY Brooklyn college. There I found my love of programming and interned at a biotech company that specialized in creating devices that checked for clean water named Omnivis and American Express. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h1>Projects</h1>
+                <!-- Tab Navigation Buttons -->
+                <div class="tab-menu">
+                    <button class="tab-btn active" onclick="openTab(event, 'qa-projects')">Quality Assurance</button>
+                    <button class="tab-btn" onclick="openTab(event, 'game-projects')">Games</button>
                 </div>
-            </li>
-        </ul>
+
+                <!-- Quality Assurance Projects Section -->
+                <div id="qa-projects" class="tab-content active">
+                    <h2>Quality Assurance</h2>
+                    <p>In these projects I aim to learn skills related to being a QA engineer.</p>
+                    <ul>
+                        <li>
+                            <div>
+                                <h3>Healthcare Data Integrity Suite</h3>
+                                <p>Use a public healthcare dataset (like a CSV of mock hospital discharges) and import it into a SQL database.</p>
+                                <p>The Task: Write a series of SQL "Audit Scripts" that check for data anomalies—for example, finding patients with a "discharge date" earlier than their "admission date" or identifying duplicate IDs.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Games Projects Section -->
+                <div id="game-projects" class="tab-content">
+                    <h2>Games</h2>
+                    <p>A collection of my game development projects and prototypes.</p>
+                    <ul>
+                        <li>
+                            <div>
+                                <h3>My Friend gorp</h3>
+                                <p>Brief description of your game goes here...</p>
+                            </div>
+                        </li>
+                        <!-- Add more game projects here -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h1>Contact me</h1>
+                <p>Email: ctavaradev@gmail.com</p>
+                <p>Linkedin: https://www.linkedin.com/in/cristian-tavara/</p>
+                <p>Github: https://github.com/nitro603</p>
+            </div>
+        </section>
     </div>
 
-    <!-- Games Projects Section -->
-    <div id="game-projects" class="tab-content">
-        <h2>Games</h2>
-        <p>A collection of my game development projects and prototypes.</p>
-        <ul>
-            <li>
-                <div>
-                    <h3>My Friend gorp</h3>
-                    <p>Brief description of your game goes here...</p>
-                </div>
-            </li>
-            <!-- Add more game projects here -->
-        </ul>
-    </div>
 
 </body>
 </html>

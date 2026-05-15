@@ -1,31 +1,42 @@
 /* Style the tab buttons */
-        .tab-menu {
-            margin-bottom: 20px;
-        }
         
-        .tab-btn {
-            background-color: #f1f1f1;
-            border: 1px solid #ccc;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 16px;
-        }
+html{
+    scroll-snap-type: y mandatory;
+}
 
-        /* Change background color of active tab */
-        .tab-btn.active {
-            background-color: #ddd;
-            font-weight: bold;
-        }
+section{
+    height:100vh;
+    scroll-snap-align: start;
+}
 
-        /* Hide tab content by default */
-        .tab-content {
-            display: none;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-top: none;
-        }
 
-        /* Show the active tab content */
-        .tab-content.active {
-            display: block;
-        }
+.tab-menu {
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Change background color of active tab */
+.tab-btn.active {
+    background-color: #ddd;
+    font-weight: bold;
+}
+
+/* Hide tab content by default */
+.tab-content {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+/* Show the active tab content */
+.tab-content.active {
+    display: block;
+}
