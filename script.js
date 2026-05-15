@@ -4,7 +4,6 @@
             for (var i = 0; i < tabContents.length; i++) {
                 tabContents[i].classList.remove("active");
             }
-
             // Get all elements with class="tab-btn" and remove the class "active"
             var tabButtons = document.getElementsByClassName("tab-btn");
             for (var i = 0; i < tabButtons.length; i++) {
