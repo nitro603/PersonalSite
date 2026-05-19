@@ -18,22 +18,22 @@
 
 const target = document.querySelector("#hero");
 const observer  = new IntersectionObserver((entries) => {
+    const heroContentElement = entries[0].target.children[0].children[0];
+    const imageWrapperElement = entries[0].target.children[0].children[1];
+
     if(entries[0].isIntersecting){
-
-        
-        const heroContentElement = entries[0].target.children[0].children[0];
-        console.log(heroContentElement);
-        console.log(heroContentElement.children.length)
         for( i = 0; i < heroContentElement.children.length; i++){
-            console.log("howdy there 3 times")
+            heroContentElement.children[i].classList.add("show");
         }
-
-        
-        const imageWrapperElement = entries[0].target.children[0].children[1];
-        console.log(imageWrapperElement);
+        imageWrapperElement.classList.add("show");        
+       
     }else{
-        //remove show tag
+        for( i = 0; i < heroContentElement.children.length; i++){
+            heroContentElement.children[i].classList.remove("show");
+        }
+        imageWrapperElement.classList.remove("show");
     }
+
 
 
 }, {});       

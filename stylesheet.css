@@ -75,6 +75,12 @@ section{
 
 /* Image wrapper: right column */
 .hero__image-wrapper {
+    translate: -20%;
+    opacity: 0;
+    transition: 1200ms ease;
+}
+
+.hero__image-wrapper.show{
     flex: 0 0 35%;
     max-width: 35%;
     aspect-ratio: 4 / 5;
@@ -84,6 +90,8 @@ section{
     align-items: center;
     justify-content: center;
     background: #f3f3f3;
+    translate: 0;
+    opacity: 1;
 }
 
 /* The image fills its wrapper and is cropped if necessary */
@@ -94,10 +102,32 @@ section{
     display: block;
 }
 
+.hero__title{
+    translate: -100%;
+    opacity: 0;
+    transition: 800ms ease;
+}
+
+.hero__title.show{
+    translate: 0;
+    opacity: 1;
+}
+
 .hero__subtitle {
     margin: 0 0 1rem 0;
     font-size: clamp(1rem, 1.6vw, 1.125rem);
     color: #111;
+    translate: -50%;
+    opacity: 0;
+    transition: 1200ms ease;
+}
+
+.hero__subtitle.show{
+    margin: 0 0 1rem 0;
+    font-size: clamp(1rem, 1.6vw, 1.125rem);
+    color: #111;
+    translate: 0;
+    opacity: 1;
 }
 
 .hero__lead {
